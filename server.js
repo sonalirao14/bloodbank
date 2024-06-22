@@ -27,9 +27,9 @@ app.use("/api/v1/admin",require("./routes/adminRoutes"));
 //static folders
 app.use(express.static(path.join(__dirname,'./client/build')))
 //static routes
-app.get("*",function(req,res){
-    res.sendFile(path.join(__dirname,"./client/build/index.html"))
-})
+// app.get("*",function(req,res){
+//     res.sendFile(path.join(__dirname,"./client/build/index.html"))
+// })
 // port
 
 app.listen(PORT,()=>{
