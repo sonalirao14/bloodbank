@@ -19,7 +19,7 @@ app.use(morgan('dev'))
 //routes
 app.use(
     cors({
-        origin:["http://localhost:8080","https://bloodbank-zi0j.onrender.com],
+        origin:["http://localhost:8080","https://bloodbank-zi0j.onrender.com"],
                 methods:["GET","POST","PUT","DELETE","PATCH"],
                 allowHeaders:["Content-type"],
                 credentials:true,
