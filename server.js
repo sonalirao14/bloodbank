@@ -17,7 +17,16 @@ app.use(express.json())
 app.use(cors())
 app.use(morgan('dev'))
 //routes
+app.use(
+    cors({
+        origin:["http://localhost:8080","https://bloodbank-zi0j.onrender.com],
+                methods:["GET","POST","PUT","DELETE","PATCH"],
+                allowHeaders:["Content-type"],
+                credentials:true,
+                })
+    );
 //1 test route
+
 app.use("/api/v1/test",require("./routes/testroutes"));
 app.use("/api/v1/auth",require("./routes/authRoutes"));
 app.use("/api/v1/inventory",require("./routes/inventoryRoutes"));
